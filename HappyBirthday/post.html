@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/22f0856279.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-piggy-bank"></i> Rinki</span
+          >Bisht
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#whatshedoes">What she does</a></li>
+            <li><a href="index.html#bio">Bio</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Yogesh Bisht</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="post">
+        <h2>Brother</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Shared by <strong>Yogesh Bisht</strong> |
+          11.2 december 2020.34
+        </p>
+        <img src="images/yogesh.jpg" alt="" />
+        <p>
+          “A sister can be seen as someone who is both ourselves and very much not ourselves—a special kind of double.”
+          —Yogesh Bisht
+        </p>
+        <p>
+          I feel lucky that i having Rinki as a sister. #blessed
+        </p>
+        <p>
+          She plays multiple roles in my life. Sometimes an instructor, sometimes a mother(gives me maggi when i am ill and eventually maggi helps in my recovery where medicines fail), sometimes a friend, sometimes a preacher, and a sometimes what she actually is i.e sister.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById('navbar');
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top');
+          if (!scrolled) {
+            navbar.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(function () {
+            navbar.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add('top');
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
